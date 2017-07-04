@@ -1,0 +1,10 @@
+1. in windows open a word.exe
+subprocess.Popen(['c:\Program Files (x86)\Windows NT\Accessories\wordpad.exe'], shell=True)
+notice you need to use [], or python will not find c:\Program
+2. Popen是阻塞的，通常:
+    p = subprocess.Popen(...)
+    stdout, stderr = p.communicate()
+    print stdout 或
+    with open(file, 'wb') as fp:
+      for line in stdout.readlines():
+        fp.write(line)

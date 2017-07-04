@@ -1,0 +1,51 @@
+1. join     http://www.cnblogs.com/jsplyy/p/5634640.html
+(1) '.'.join(seq)
+    以.为分割符分割seq字符串
+    >>> '.'.join('book')
+    'b.o.o.k'
+(2) 对多个路径进行合并
+    os.path.join(path1,path2,path3)
+    path1/path2/path3
+    >>> os.path.join('/user/','bin')
+    '/user/bin'
+2.If you are from another country, and you get errors about ASCII encodings, then put this at the top of your Python scripts:
+
+# -*- coding: utf-8 -*-
+It will fix them so that you can use Unicode UTF-8 in your scripts without a problem.
+3. os shutil
+   http://www.cnblogs.com/rollenholt/archive/2012/04/23/2466179.html
+	os.listdir('.') 列出当前路径下的文件
+   os.getcwd()  获取当前路径
+   os.path.exist(path)  路径是否存在
+	os.remove()
+	os.path.split() 返回一个路径的目录名和文件名:   eg os.path.split('/home/swaroop/byte/code/poem.txt') 结果：('/home/swaroop/byte/code', 'poem.txt') 
+	os.path.dirname('/Users/wqu/Code/python_git')  获取路径名  '/Users/wqu/Code'
+ 	os.path.basename('/Users/wqu/Code/python_git') 获取文件名  'python_git'
+	os.system('ls') 运行shell命令
+	os.getenv()  读取环境变量
+	os.name   指示你正在使用的平台    对于Windows，它是'nt'，而对于Linux/Unix用户，它是'posix'  
+	os.rename(old, new)
+	os.remove(file)  删除文件
+	os.removedirs(folder) 删除文件夹
+	os.mkdir('test') 创建文件夹
+	os.makedirs(r'c:\python\test')  创建多级目录
+	
+	fp = open('a.txt', 'w')  打开文件，如果不存在则创建文件
+	fp.write(str)  写
+	fp.close()
+	fp = open('a.txt', 'r')  打开文件读
+	fp.readlines()  把文件每一行作为一个list成员，并返回这个list
+	
+	import shutil
+	shutil.copy(oldfile, newfile)
+	shutil.copytree(olddir, newdir)
+	shutil.move(oldpos, newpos)
+	shutil.rmtree(dir)  空目录，有内容的目录都可以删
+4. try import except
+try:
+	import simplejson as json
+except ImportError:
+	import json
+
+5.
+
