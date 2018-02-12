@@ -1,0 +1,19 @@
+wqu@ubuntu:~/code/test$ cat tes
+test_kwargs.py  test.py         
+wqu@ubuntu:~/code/test$ cat test_kwargs.py 
+#!/usr/bin/python
+
+kwargs = {
+        "id": 1234,
+        "name": 'wqu',
+        "age": 29
+        }
+
+def update_info(**kwargs):
+    id = kwargs.get('id')
+    name = kwargs.get('name')
+    age = kwargs.get('age')
+    print id, name, age
+
+if __name__ == '__main__':
+    update_info(**kwargs)
